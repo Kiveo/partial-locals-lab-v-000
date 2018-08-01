@@ -9,4 +9,6 @@
 <% end %>
 
 <!-- result(s) displayed with student partial -->
-<%= render partial: 'student', locals: {student: @student} %>
+<%= @students.each do |student| %>
+  <%= render partial: 'student', locals: {student: @student} %>
+<% end %>
