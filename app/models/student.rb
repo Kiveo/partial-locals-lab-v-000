@@ -14,6 +14,7 @@ class Student < ActiveRecord::Base
   has_many :classroom_students
   has_many :classrooms, through: :classroom_students
 
+  # SQL and Rails friendly search method
   def self.search(search_name)
     if search_name.empty?
       Student.all
